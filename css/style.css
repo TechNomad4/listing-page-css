@@ -1,0 +1,428 @@
+.cus-container{
+    max-width: 1220px;
+}
+.aspect-ratio-1x1{
+    aspect-ratio: 1/1 !important;
+}
+.cursor-pointer{
+    cursor: pointer !important;
+}
+.area-disabled{
+    pointer-events: none;
+    opacity: 0.7;
+}
+.info-icon{
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+
+.preview .preview-box{
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.preview .preview-box.active{
+    border: 3px solid var(--primary);
+}
+.preview  .preview-box-item:nth-child(1) .preview-box{
+    background-image: url('../images/wall-empty.jpg');
+}
+.preview .preview-box-item:nth-child(2) .preview-box{
+    background-image: url('../images/wall-frames.jpg');
+}
+.preview .preview-box-item:nth-child(3) .preview-box{
+    background-image: url('../images/interior.jpg');
+}
+.preview .preview-box .preview-box-inner{
+    position: absolute;
+    transition: all 350ms ease, padding 0ms ease;
+    overflow: hidden;
+}
+.preview .preview-box .preview-box-inner img{
+    width:100%;
+    transition: transform 350ms ease;
+}
+.preview .preview-box-item:nth-child(1) .preview-box .preview-box-inner{
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: -4px 4px 4px rgb(0 0 0 / 30%);
+}
+.preview .preview-box-item:nth-child(2) .preview-box .preview-box-inner{
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform-origin: right;
+    transform: translate(-30%, -50%) perspective(200px) rotateY(45deg);
+    box-shadow: -18px 6px 7px -6px rgb(0 0 0 / 10%);
+}
+.preview .preview-box-item:nth-child(3) .preview-box .preview-box-inner{
+    width: 20%;
+    top: 10%;
+    left: 25%;
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 10%);
+}
+
+.mainview{
+    background-image: url('../images/wall-empty.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+}
+.mainview-box{
+    width: 50%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    box-shadow: -7px 6px 20px 1px rgb(0 0 0 / 15%);
+    transition: all 350ms ease, border 0ms;
+    overflow: hidden;
+}
+.mainview-box img{
+    width:100%;
+    transition: all 350ms ease;
+}
+.mainview-info-container{
+    position: relative;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+.mainview-info{
+    position: absolute;
+}
+.mainview-info-container .mainview-info:nth-child(1){
+    top:20%;
+    left:50%;
+}
+.mainview-info-container .mainview-info:nth-child(2){
+    top:50%;
+    left:65%;
+}
+.mainview-info-container .mainview-info:nth-child(3){
+    top:55%;
+    left:15%;
+}
+.gloss{
+    position: relative;
+}
+.gloss::after{
+    content: '';
+    position: absolute;
+    right:0%;
+    top:-50%;
+    width: 80%;
+    height: 200%;
+    z-index:800;
+    background:linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255,255,255, 0));
+    transform: rotate(-45deg);
+    animation: glossEffect 750ms ease-out 0s 1;
+}
+.zoomed-backfall{
+    background-color: rgba(255, 255, 255, 1);
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    opacity: 0;
+    border:1px solid rgba(100,100,100,0.1);
+    transition: all 350ms ease;
+}
+.zoomed-backfall .plateImage{
+    position: relative;
+    opacity: 0.03;
+    background:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.zoomed-backfall .plateImage img{
+    width: 50% !important;    
+}
+
+.zoomed{
+    max-width: 400px;
+    width: 80%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    z-index: 1200;
+    border-radius: 20px;
+    box-shadow:0px 0px 15px rgba(0,0,0,0.4);
+    overflow: hidden;
+    top:-100%;
+    left:-100%;
+    transform: translate(-50%, -50%);
+}
+.zoomed-content{
+    background-image: url('../images/wall-empty.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform:translate(0%, 0%);
+    overflow: hidden;
+}
+.zoomed-content .plateImage{
+    position: relative;
+    background:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.zoomed-content .plateImage img{
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+    width: 50% !important;
+}
+.size-item.active{
+    border: 2px solid var(--primary);
+}
+.size-item-body{
+    position: relative;
+    height: 120px;
+}
+.size-preview{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+.size-preview-inner{
+    position: absolute;  
+    z-index: 500;
+    transition: all 350ms ease, border 0ms, padding 0ms;
+}
+.size-preview-inner img{
+    width: 100%;
+}
+
+.size-holder .size-wrapper .size-background{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 800;
+}
+.size-holder .size-wrapper:nth-child(1) .size-background{
+    background-position: center bottom;
+    background-size: 112px;
+    background-repeat: no-repeat;
+    background-image: url('../images/size-1x.png');
+}
+.size-holder .size-wrapper:nth-child(2) .size-background{
+    background-position: center bottom;
+    background-size: 112px;
+    background-repeat: no-repeat;
+    background-image: url('../images/size-2x.png');
+}
+.size-holder .size-wrapper:nth-child(3) .size-background{
+    background-position: center bottom;
+    background-size: 112px;
+    background-repeat: no-repeat;
+    background-image: url('../images/size-3x.png');
+}
+.size-holder .size-wrapper:nth-child(1) .size-preview-inner{
+    width: 40px;
+    top:60px;
+    left:50%;
+    transform: translateX(-55%);
+}
+.size-holder .size-wrapper:nth-child(2) .size-preview-inner{
+    width: 50px;
+    top:45px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.size-holder .size-wrapper:nth-child(3) .size-preview-inner{
+    width: 60px;
+    top:20px;
+    left:50%;
+    transform: translateX(-30%);
+}
+
+.frame-two::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-image: url('../images/frame-natural-wood.png');
+}
+.frame-three::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-image: url('../images/frame-graphite.png');
+}
+.frame-four::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-image: url('../images/frame-white-wood.png');
+}
+.frame-five::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-image: url('../images/frame-black-wood.png');
+}
+.crosshair::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-image: url('../images/cross.png');
+}
+.w-200px{
+    max-width: 200px !important;
+    text-align: left;
+    padding:5px;
+}
+.frame-item{
+    aspect-ratio: 1/1 !important;
+    border:2px solid white;
+}
+.frame-item.active{
+    border: 2px solid var(--primary);;
+}
+
+
+.check-option{
+    width:1px;
+    height:1px;
+    visibility: hidden;
+    background-color:transparent;
+    display:inline-block;
+}
+.check-option:checked{
+    border:0px solid transparent;
+    background-color:transparent;
+    outline:0
+}
+.check-option:focus{
+    border:0px solid transparent;
+    background-color:transparent;
+    outline:0
+}
+.check-option-wrapper{
+    padding: 8px 3px; 
+    cursor: pointer !important
+}
+.check-option-wrapper:hover{
+    background-color:rgba(0,123,255, 0.05) !important;
+}
+.check-option-wrapper span::after{
+    content:"\2713";
+    width:22px;
+    height:22px;
+    line-height:22px;
+    font-weight: bold;
+    vertical-align: top;
+    font-size: 12px;
+    margin:0 8px 0 0;
+    border-radius:50%;
+    text-align:center;
+    background-color:#fff;
+    border:1px solid rgba(0,0,0,0.15);
+    display:inline-block;
+    color:transparent;
+}
+.check-option:checked~span::after{
+    border:0px solid #fff;
+    background-color:var(--primary);
+    color:#fff;
+}
+
+
+/** Overwritting Bootstrap Tooltip */
+.tooltip-inner {
+    max-width: none;
+    color: black;
+    background-color: white;
+    padding: 7px !important;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+}
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
+    content: "";
+    border-width: 0.5rem 0.5rem 0;
+    border-top-color: white;
+}
+.tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.bs-tooltip-right .arrow::before {
+    margin-top: -3px;
+    content: "";
+    border-width: 0.5rem 0.5rem 0.5rem 0;
+    border-right-color: white;
+}
+.tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.bs-tooltip-bottom .arrow::before {
+    margin-left: -3px;
+    content: "";
+    border-width:0 0.5rem 0.5rem;
+    border-bottom-color: white;
+}
+.tooltip.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.bs-tooltip-left .arrow::before {
+    right: 0;
+    margin-top: -3px;
+    content: "";
+    border-width: 0.5rem 0 0.5rem 0.5rem;
+    border-left-color: white;
+}
+
+@keyframes glossEffect {
+    0%{
+        right:-120%;
+    }
+    100%{
+        right:0%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .mainview{
+        aspect-ratio: 1/1 !important;
+    }
+}

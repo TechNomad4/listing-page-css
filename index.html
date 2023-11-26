@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Decoration</title>
+</head>
+<body>
+    <div class="cus-container mx-auto py-5 px-0">
+        <div class="row m-0">
+            <div class="col-lg-8 col-12 p-0">
+                <div class="row m-0">
+                    <div class="col-xl-2 col-12 order-xl-1 order-2 p-0">
+                        <div class="row mx-xl-0 mr-0 ml-3 mt-xl-0 mt-3 p-lg-0 p-3 preview">
+                            <div class="col-xl-12 col-3 pl-0 pr-xl-0 pr-3 mb-xl-3 preview-box-item" onclick="setView(1);">
+                                <div class="preview-box aspect-ratio-1x1 cursor-pointer active">
+                                    <div class="preview-box-inner">
+                                        <div class="preview-gloss plateImage"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-3 pl-0 pr-xl-0 pr-3 mb-xl-3 preview-box-item" onclick="setView(2);">
+                                <div class="preview-box aspect-ratio-1x1 cursor-pointer">
+                                    <div class="preview-box-inner">
+                                        <div class="preview-gloss plateImage"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-3 pl-0 pr-xl-0 pr-3 mb-xl-3 preview-box-item"  onclick="setView(3);">
+                                <div class="preview-box aspect-ratio-1x1 cursor-pointer">
+                                    <div class="preview-box-inner">
+                                        <div class="preview-gloss plateImage"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-3 pl-0 pr-xl-0 pr-3 ">
+                                <div class="border bg-light preview-box aspect-ratio-1x1 d-flex align-items-center justify-content-center">
+                                    <small><address>Video Preview</address></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-12 order-xl-2 order-1 px-3">
+                        <div class="mainview overflow-hidden">
+                            <div class="mainview-box">
+                                <div class="mainview-gloss">
+                                    <img src="images/image.jpg">
+                                </div>
+                            </div>
+
+                            <div class="mainview-info-container d-none">
+                                <span class="mainview-info bg-white text-nowrap rounded-pill px-2 py-1"><i class="fa fa-check-circle-o mr-1"></i> <small>High Quality print on metal</small></span>
+                                <span class="mainview-info bg-white text-nowrap rounded-pill px-2 py-1"><i class="fa fa-check-circle-o mr-1"></i> <small>Vivid colours</small></span>
+                                <span class="mainview-info bg-white text-nowrap rounded-pill px-2 py-1"><i class="fa fa-check-circle-o mr-1"></i> <small>Magnet mounting System</small></span>
+                            </div>
+
+                            <div class="zoomed-backfall">
+                                <div class="plateImage"></div>
+                            </div>
+                            <div class="zoomed">
+                                <div class="zoomed-content">
+                                    <div class="plateImage"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 px-lg-3 px-5">
+                <div class="row">
+                    <div class="col-12 px-0"><h3>Beer</h3></div>
+                    <div class="col-12 px-0 py-3">Select Size:</div>
+                    <div class="col-12 p-0">
+                        <div class="row m-0 size-holder">
+                            <div class="col-4 pl-0 pr-2 size-wrapper">
+                                <div class="size-item active cursor-pointer" onclick="setSize('M')">
+                                    <div class="border-bottom p-2 d-flex justify-content-between align-items-center">
+                                        <span class="h6 m-0 p-0">M</span>
+                                        <span class="small">17.7'' / 12.6''</span>
+                                    </div>
+                                    <div class="size-item-body">
+                                        <div class="size-preview">
+                                            <div class="size-preview-inner">
+                                                <div class="size-preview-gloss plateImage"></div>
+                                            </div>
+                                        </div>
+                                        <div class="size-background"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 px-1 size-wrapper">
+                                <div class="border size-item cursor-pointer" onclick="setSize('L')">
+                                    <div class="border-bottom p-2 d-flex justify-content-between align-items-center">
+                                        <span class="h6 m-0 p-0">L</span>
+                                        <span class="small">26.6'' / 18.9''</span>
+                                    </div>
+                                    <div class="size-item-body">
+                                        <div class="size-preview">
+                                            <div class="size-preview-inner">
+                                                <div class="size-preview-gloss plateImage"></div>
+                                            </div>
+                                        </div>
+                                        <div class="size-background"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 pl-2 pr-0 size-wrapper">
+                                <div class="border size-item cursor-pointer" onclick="setSize('XL')">
+                                    <div class="border-bottom p-2 d-flex justify-content-between align-items-center">
+                                        <span class="h6 m-0 p-0">XL</span>
+                                        <span class="small">35.4'' / 25.2''</span>
+                                    </div>
+                                    <div class="size-item-body">
+                                        <div class="size-preview">
+                                            <div class="size-preview-inner">
+                                                <div class="size-preview-gloss plateImage"></div>
+                                            </div>
+                                        </div>
+                                        <div class="size-background"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="w-100 border-top my-4"></div>
+
+                    <div class="col-4 px-0 d-flex align-items-center">
+                        Select finish:
+                        <span class="info-icon rounded-circle border border-dark text-primary ml-2" data-toggle="tooltip" data-placement="bottom" data-html="true" title='<img src="images/matte-gloss.jpg" width="400">'>
+                            ?
+                        </span>
+                    </div>
+                    <div class="col-4 pl-0 pr-2">
+                        <label class="finish-item w-100 bg-white border p-2 m-0 rounded-lg cursor-pointer check-option-wrapper">
+                            <input type="radio" class="check-option" name="finish" checked oninput="setFinish('matte')"> <span></span> Matte
+                        </label>
+                    </div>
+                    <div class="col-4 pr-0 pl-2">
+                        <label class="finish-item w-100 bg-white border p-2 m-0 rounded-lg cursor-pointer check-option-wrapper">
+                            <input type="radio" class="check-option" name="finish" oninput="setFinish('gloss')"> <span></span> Gloss
+                        </label>
+                    </div>
+
+                    <div class="w-100 border-top my-4"></div>
+
+                    <div class="col-4 px-0 d-flex align-items-center">
+                        Select frame:
+                        <span class="info-icon rounded-circle border border-dark text-primary ml-2" data-toggle="tooltip" data-placement="bottom" data-html="true" title='<div class="small w-200px">Each frame is 3D printed on metal using a patent pending technology. Frame do not enlarge the size of the Displate</div>'>
+                            ?
+                        </span>
+                    </div>
+                    <div class="col p-0 mr-2 frame-item cursor-pointer active" onclick="setFrame(1)" data-toggle="tooltip" data-placement="top" data-html="true" title='<small>No Frame</small>'>
+                        <img class="w-100 h-100" src="images/no-frame.jpg">
+                    </div>
+                    <div class="col p-0 mr-2 frame-item cursor-pointer" onclick="setFrame(2)" data-toggle="tooltip" data-placement="top" data-html="true" title='<small>Natural Wood Pattern</small>'>
+                        <img class="w-100 h-100" src="images/natural-wood.jpg">
+                    </div>
+                    <div class="col p-0 mr-2 frame-item cursor-pointer" onclick="setFrame(3)" data-toggle="tooltip" data-placement="top" data-html="true" title='<small>Graphite</small>'>
+                        <img class="w-100 h-100" src="images/graphite.jpg">
+                    </div>
+                    <div class="col p-0 mr-2 frame-item cursor-pointer" onclick="setFrame(4)" data-toggle="tooltip" data-placement="top" data-html="true" title='<small>White Wood Pattern</small>'>
+                        <img class="w-100 h-100" src="images/white-wood.jpg">
+                    </div>
+                    <div class="col p-0 frame-item cursor-pointer" onclick="setFrame(5)" data-toggle="tooltip" data-placement="top" data-html="true" title='<small>Black Wood Pattern</small>'>
+                        <img class="w-100 h-100" src="images/black-wood.jpg">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
